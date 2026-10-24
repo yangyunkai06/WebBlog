@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: yangyunkai06/WebBlog
+  branch: main
+  # ↓ 认证中转：DecapBridge 注册后如果生成的片段和这里不一致，以它给的为准
+  base_url: https://auth.decapbridge.com
+  site_domain: yangyunkai06.github.io
+
+site_url: https://yangyunkai06.github.io/WebBlog/
+locale: 'zh_Hans'
+
+# 图片上传后存放的位置
+media_folder: 'source/images'
+public_folder: '/images'
+
+# simple 模式：点击发布即提交到 main，构建后上线
+publish_mode: simple
+
+collections:
+  - name: 'posts'
+    label: '文章'
+    label_singular: '文章'
+    folder: 'source/_posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    sortable_fields: ['date', 'title']
+    summary: '{{title}} — {{date}}'
+    fields:
+      - { label: '标题', name: 'title', widget: 'string' }
+      - { label: '发布日期', name: 'date', widget: 'datetime' }
+      - { label: '标签', name: 'tags', widget: 'list', required: false, default: [] }
+      - { label: '分类', name: 'categories', widget: 'list', required: false, default: [] }
+      - { label: '正文', name: 'body', widget: 'markdown' }
