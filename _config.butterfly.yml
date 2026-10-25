@@ -3,5 +3,11 @@
 # 全站背景图（主题会自动补全 /WebBlog 前缀）
 background: /img/bg1.jpg
 
+# 自定义 CSS：首页头图透明化（露出背景图、隐藏站名）+ 醒目下滑提示
+inject:
+  head:
+    - >-
+      <style>#page-header.full_page{background:transparent !important}#page-header.full_page #site-info{display:none !important}#page-header.full_page #scroll-down{bottom:7vh;text-align:center}#page-header.full_page #scroll-down::before{content:'下滑';display:block;margin-bottom:10px;font-size:22px;font-weight:700;letter-spacing:.35em;padding-left:.35em;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6);animation:scrollBlink 2s ease-in-out infinite}#page-header.full_page #scroll-down .scroll-down-effects{font-size:44px !important;color:#fff !important;text-shadow:0 2px 10px rgba(0,0,0,.6) !important}@keyframes scrollBlink{0%,100%{opacity:1}50%{opacity:.45}}</style>
+
 footer:
   custom_text: '<a href="https://yangyunkai06.github.io/WebBlog/admin/" style="opacity:.55">管理</a>'
