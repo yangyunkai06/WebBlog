@@ -6,10 +6,8 @@ background: /img/bg1.jpg
 # 首页卡片布局：6 = 双列（上图下文）
 index_layout: 6
 
-# 文章未设置封面时，随机从这里选一张当封面
-cover:
-  default_cover:
-    - /img/bg1.jpg
+# 文章/归档等内页顶部横幅图（主题会自动补全 /WebBlog 前缀）
+default_top_img: /img/bg2.jpg
 
 # 页脚背景交给 CSS 透明化处理
 footer_bg: false

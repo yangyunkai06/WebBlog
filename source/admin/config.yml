@@ -52,4 +52,5 @@ collections:
       - { label: '发布日期', name: 'date', widget: 'datetime' }
       - { label: '标签', name: 'tags', widget: 'list', required: false, default: [] }
       - { label: '分类', name: 'categories', widget: 'list', required: false, default: [] }
+      - { label: '公开', name: 'published', widget: 'boolean', default: true, hint: '关闭 = 私有文章（网站完全不显示，仅后台和仓库可见）' }
       - { label: '正文', name: 'body', widget: 'markdown' }
