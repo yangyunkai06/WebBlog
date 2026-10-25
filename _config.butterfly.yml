@@ -3,11 +3,16 @@
 # 全站背景图（主题会自动补全 /WebBlog 前缀）
 background: /img/bg1.jpg
 
+# 页脚透明，与背景图融为一体（颜色本身由 scripts/recolor.js 统一换绿）
+footer_bg: false
+
 # 自定义 CSS：首页头图透明化（露出背景图、隐藏站名）+ 醒目下滑提示
 inject:
   head:
     - >-
       <style>#page-header.full_page{background:transparent !important}#page-header.full_page #site-info{display:none !important}#page-header.full_page #scroll-down{bottom:7vh;text-align:center}#page-header.full_page #scroll-down::before{content:'下滑';display:block;margin-bottom:10px;font-size:22px;font-weight:700;letter-spacing:.35em;padding-left:.35em;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6);animation:scrollBlink 2s ease-in-out infinite}#page-header.full_page #scroll-down .scroll-down-effects{font-size:44px !important;color:#fff !important;text-shadow:0 2px 10px rgba(0,0,0,.6) !important}@keyframes scrollBlink{0%,100%{opacity:1}50%{opacity:.45}}</style>
+    - >-
+      <style>:root{--card-bg:rgba(255,255,255,.82)}#content-inner .card-widget,#content-inner .recent-post-item,#content-inner #page,#content-inner #post,#content-inner #archive,#content-inner #tag,#content-inner #category{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;box-shadow:0 3px 14px rgba(0,0,0,.08)}#content-inner .recent-post-item{transition:transform .3s ease,box-shadow .3s ease}#content-inner .recent-post-item:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.14)}#content-inner .recent-post-item .post_cover img{border-radius:14px 0 0 14px}@media screen and (max-width:768px){#content-inner .recent-post-item .post_cover img{border-radius:14px 14px 0 0}}</style>
 
 footer:
   custom_text: '<a href="https://yangyunkai06.github.io/WebBlog/admin/" style="opacity:.55">管理</a>'
