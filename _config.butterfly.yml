@@ -1,0 +1,4 @@
+# Butterfly 主题自定义配置（覆盖 node_modules 内主题默认值，只需写要改的项）
+
+footer:
+  custom_text: '<a href="https://yangyunkai06.github.io/WebBlog/admin/" style="opacity:.55">管理</a>'
